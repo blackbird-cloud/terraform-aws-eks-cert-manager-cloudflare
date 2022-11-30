@@ -1,0 +1,6 @@
+dnsZones: []
+
+cloudflare:
+  email: my@emaill.com
+  secretName: cloudflare
+  secretKey: cloudflare_api_key

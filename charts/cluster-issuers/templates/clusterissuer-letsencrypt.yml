@@ -1,0 +1,24 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    email: {{ .Values.cloudflare.email }}
+    privateKeySecretRef:
+      name: letsencrypt
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+      - dns01:
+          cloudflare:
+            email: {{ .Values.cloudflare.email }}
+            apiKeySecretRef:
+              name: {{ .Values.cloudflare.secretName }}
+              key: {{ .Values.cloudflare.secretKey }} 
+        selector:
+          dnsZones:
+{{ toYaml .Values.dnsZones | indent 12 }}
