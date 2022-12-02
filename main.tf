@@ -1,5 +1,5 @@
 locals {
-  cert_manager_name           = "cert-manager"
+  cert_manager_name           = var.name
   cert_manager_name_namespace = kubernetes_namespace.cert_manager.metadata[0].name
 }
 

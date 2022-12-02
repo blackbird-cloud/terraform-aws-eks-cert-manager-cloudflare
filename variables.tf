@@ -26,7 +26,7 @@ variable "cluster_id" {
 variable "cloudflare_token" {
   type        = string
   sensitive   = true
-  description = "Cloudflare API token, base64 encoded"
+  description = "Cloudflare API token"
 }
 
 variable "cloudflare_email" {

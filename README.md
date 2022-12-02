@@ -1,8 +1,5 @@
 ## Requirements
 
-Install cert-manager CRDs `kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.crds.yaml`
-
-
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1 |
@@ -39,7 +36,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_annotations"></a> [annotations](#input\_annotations) | Annotations applied to all Kubernetes resources | `map(string)` | `{}` | no |
 | <a name="input_cloudflare_email"></a> [cloudflare\_email](#input\_cloudflare\_email) | Cloudflare email associated with the token | `string` | n/a | yes |
-| <a name="input_cloudflare_token"></a> [cloudflare\_token](#input\_cloudflare\_token) | Cloudflare API token, base64 encoded | `string` | n/a | yes |
+| <a name="input_cloudflare_token"></a> [cloudflare\_token](#input\_cloudflare\_token) | Cloudflare API token | `string` | n/a | yes |
 | <a name="input_cluster_id"></a> [cluster\_id](#input\_cluster\_id) | AWS EKS cluster ID | `string` | n/a | yes |
 | <a name="input_dns_zones"></a> [dns\_zones](#input\_dns\_zones) | List of dns zones we will be creating certificates for | `list(string)` | n/a | yes |
 | <a name="input_labels"></a> [labels](#input\_labels) | Labels applied to all Kubernetes resources | `map(string)` | <pre>{<br>  "istio-injection": "disabled"<br>}</pre> | no |

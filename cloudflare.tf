@@ -5,6 +5,6 @@ resource "kubernetes_secret" "cloudflare" {
   }
 
   data = {
-    cloudflare_api_key = base64decode(var.cloudflare_token)
+    cloudflare_api_key = var.cloudflare_token
   }
 }
